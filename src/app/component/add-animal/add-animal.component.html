@@ -1,0 +1,15 @@
+<p>add-animal works!</p>
+
+<form>
+    
+    <label for="add-animal">Lägg till djur</label>
+    <input id="add-animal" type="name" [formControl]="name"/>
+
+    <button (click)="changeName()">Klicka för att ändra till mitt namn</button>
+
+</form>
+
+
+<p>
+    {{ name.value }}
+</p>
