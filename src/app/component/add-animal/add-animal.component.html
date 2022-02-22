@@ -2,14 +2,31 @@
 
 <form>
     
-    <label for="add-animal">Lägg till djur</label>
-    <input id="add-animal" type="name" [formControl]="name"/>
+    <label>Namn på djuret: </label>
+    <input id="add-animal" [formControl]="name"/>
 
-    <button (click)="changeName()">Klicka för att ändra till mitt namn</button>
+    <br>
+    <br>
 
+    <label for="add-animal">Vilket djur? </label>
+    <input id="add-animal" [formControl]="type">
+
+    <br>
+    <br>
+
+    <label for="add-animal">Djurbeskrivning: </label>
+    <input id="add-animal" [formControl]="description">
+
+    <br>
+    <br>
+
+    <button type="button" (click)="changeName()">Spara</button>
 </form>
 
-
 <p>
-    {{ name.value }}
+    {{ 
+         name.value 
+        + type.value 
+        + description.value
+    }}
 </p>
