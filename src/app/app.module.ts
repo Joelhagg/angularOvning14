@@ -4,11 +4,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AddAnimalComponent } from './component/add-animal/add-animal.component';
+import { AddAnimalGroupsComponent } from './component/add-animal-groups/add-animal-groups.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddAnimalComponent
+    AddAnimalComponent,
+    AddAnimalGroupsComponent
   ],
   imports: [
     BrowserModule,
