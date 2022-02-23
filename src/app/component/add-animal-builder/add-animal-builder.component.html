@@ -1,0 +1,30 @@
+<p>add-animal-builder works!</p>
+
+<form [formGroup]="animalForm">
+    
+    <label>Djurets namn: </label>
+    <input type="text" formControlName="name">
+
+    <br>
+    <br>
+
+    <label>Vilket djur? </label>
+    <input type="text" formControlName="type">
+
+    <br>
+    <br>
+
+    <label>Djurbeskrivning: </label>
+    <input type="text" formControlName="description">
+
+    <br>
+    <br>
+
+    <button type="submit" [disabled]="!animalForm.valid">Klicka för att spara</button>
+
+</form>
+
+<p>
+    Formulärets status:
+    {{animalForm.status}}
+</p>
