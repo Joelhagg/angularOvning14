@@ -1,0 +1,28 @@
+<p>add-animal-groups works!</p>
+
+<form [formGroup]="animalGroupForm">
+
+    <label>Djurets namn: </label>
+    <input id="animal-name" type="text" formControlName="name">
+
+    <br>
+    <br>
+
+    <label>Vilket djur? </label>
+    <input id="animal-type" type="text" formControlName="type">
+
+    <br>
+    <br>
+
+    <label>Djurbeskrivning: </label>
+    <input id="animal-description" type="text" formControlName="description">
+
+    <br>
+    <br>
+
+    <button type="submit" (click)="saveForm()">Klicka för att spara</button>
+</form>
+
+<p>
+    {{ animalGroupForm.value | json }}
+</p>

@@ -7,15 +7,14 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./add-animal.component.scss']
 })
 export class AddAnimalComponent implements OnInit {
-
-  name = new FormControl('');
-  type = new FormControl('');
-  description = new FormControl('');
+  name = new FormControl('')
+  type = new FormControl('')
+  description = new FormControl('')
 
   changeName() {
-    this.name.setValue('Joel');
+    this.name.setValue('katten Nils')
   }
-
+  
   constructor() { }
 
   ngOnInit(): void {
