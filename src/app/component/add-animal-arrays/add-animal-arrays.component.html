@@ -1,0 +1,52 @@
+<p>add-animal-arrays works!</p>
+
+<form [formGroup]="animalForm">
+    
+    <label>Djurets namn: </label>
+    <input type="text" formControlName="name">
+
+    <br>
+    <br>
+
+    <label>Vilket djur? </label>
+    <input type="text" formControlName="type">
+
+    <br>
+    <br>
+
+    <label>Djurbeskrivning: </label>
+    <input type="text" formControlName="description">
+
+    <br>
+    <br>
+
+    <button type="submit">Spara</button>
+
+    <br>
+    <br>
+
+    
+
+    <div formArrayName="nickNames">
+
+        <button (click)="addNickName()">Lägg till smeknamn</button>
+
+        <br>
+
+        <div *ngFor="let nick of nickNames.controls; let i = index" >
+
+            <br>
+
+            <label>Djurets smeknamn</label>
+            <input type="text" [formControlName]="i">
+
+        </div>
+    </div>
+
+  
+
+</form>
+
+<p>
+    {{ animalForm.value | json}}
+</p>
